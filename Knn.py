@@ -37,3 +37,8 @@ plt.plot(fpr,tpr)
 plt.xlim([0,1]) 
 plt.ylim([0,1])
 plt.style.use("dark_background")
+
+# Knn works based on minimum distance from the query instance to the training samples to determine the k- nearest neighbour.
+# After we gather k- nearest neighbour we take simple majority of these k- nearest neighbour to the prediction of the query instance.
+# The data for knn generation consist of several multivariate attribute name that will be used to classify.
+# It uses all of the data for training while classifying a new data point or instance.

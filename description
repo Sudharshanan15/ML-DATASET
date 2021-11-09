@@ -1,0 +1,26 @@
+
+
+Knn works based on minimum distance from the query instance to the training samples to determine the k- nearest neighbour.
+After we gather k- nearest neighbour we take simple majority of these k- nearest neighbour to the prediction of the query instance.
+The data for knn generation consist of several multivariate attribute name that will be used to classify.
+It uses all of the data for training while classifying a new data point or instance.
+
+
+Decision tree algorithm works for both continuous as well as categorised output variables.
+The best attribute is placed on the root node of the tree.
+The training set of the data set is splitted into subsets.
+While maintaining the subset make sure that each subset of training data set should have the same value for an attribute.
+The leaf nodes in all branches are found.
+
+
+Random forest, the name implies, consists of a large number of individuals decision tree that operate as an ensemble.
+Each individual tree in the random forest splits out a class prediction and the class with the most votes become our model’s prediction.
+The reason for this wonderful effect is that the tree predict each other from their individual efforts.
+While some tree may be wrong, many other tree will be right. So as group of tree are able to move in correct decision.
+
+Decision tree is a flow- chart where the structure where an internal note represents feature.
+Partition is done on the basis of the attribute value.
+In partition the tree in recursively manner called recursive partition.
+This flow- chart like structure helps you in decision making.
+Its visualization like a flow chart diagram which easily minimises the human level thinking.
+Decision tree is easy to understand and interpret.

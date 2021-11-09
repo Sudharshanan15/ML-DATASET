@@ -36,3 +36,4 @@ plt.style.use("dark_background")
 from sklearn.tree import export_graphviz
 export_graphviz(dt, out_file ='tree.dot',
 feature_names = ["Gender","Age","Salary"], class_names = ['0','1'], rounded = True, proportion = False, precision = 2, filled = True)
+ #!dot tree.dot -Tpng -o image.png
