@@ -1,0 +1,31 @@
+DESCRIPTION:
+As the name suggests it is an algorithm that builds hierarchy of clusters.
+The algorithm starts with all the data point assigned to the cluster of their own.
+Then two nearest cluster are merged into same clusters.
+In the end, this algorithm terminates when there is a single cluster left.
+The decision of merging two clusters is taken on the basis of closeness of these clusters.
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+dataset = pd.read_csv('Mall_Customers.csv') x = dataset.iloc[:, [3, 4]].values
+x[:5]
+import scipy.cluster.hierarchy as sch
+dendrogram = sch.dendrogram(sch.linkage(x, method = 'ward')) plt.title('Dendrogram') plt.xlabel('Customers')
+plt.ylabel('Euclidean distances')
+plt.show()
+from sklearn.cluster import AgglomerativeClustering
+hc = AgglomerativeClustering(n_clusters = 5, affinity = 'euclidean', linkage = 'ward')
+y_hc = hc.fit_predict(x)
+
+plt.scatter(x[y_ == 0, 0] x[y_h == 0, 1], s = 100, c = 'red', label = 'Cluster 1') hc ,c
+plt.scatter(x[y_ == 1, 0] x[y_h == 1, 1], s = 100, c = 'blue', label = 'Cluster hc ,c 2')
+plt.scatter(x[y_ == 2, 0] x[y_h == 2, 1], s = 100, c = 'green', label = 'Cluster hc ,c 3')
+plt.scatter(x[y_ == 3, 0] x[y_h == 3, 1], s = 100, c = 'cyan', label = 'Cluster
+hc ,c 4')
+plt.scatter(x[y_ == 4, 0] x[y_h == 4, 1], s = 100, c = 'magenta', label = 'Cluster hc ,c 5')
+plt.title('Clusters of customers')
+plt.xlabel('Annual Income
+(k$)') plt.ylabel('Spending
+Score (1-100)') plt.legend()
+plt.show()
